@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Cotxes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="contenidor">
+        <h1>Targetes de Cotxes</h1>
+
+        <section id="targetes" class="targetes">
+            
+        </section>
+
+        <section class="seccio">
+            <h2>Comparació de Cotxes</h2>
+
+            <div class="controls">
+                <div>
+                    <label for="cotxe1">Selecciona el primer cotxe:</label>
+                    <select id="cotxe1">
+                        <option value="">Selecciona un cotxe</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="cotxe2">Selecciona el segon cotxe:</label>
+                    <select id="cotxe2">
+                        <option value="">Selecciona un cotxe</option>
+                    </select>
+                </div>
+
+                <button id="comparar">Comparar</button>
+            </div>
+
+            <p id="errorComparacio" class="error"></p>
+
+            <div class="taula-contenidor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th id="nomCotxe1">Cotxe 1</th>
+                            <th id="nomCotxe2">Cotxe 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Potència</th>
+                            <td id="potencia1">-</td>
+                            <td id="potencia2">-</td>
+                        </tr>
+                        <tr>
+                            <th>Motor</th>
+                            <td id="motor1">-</td>
+                            <td id="motor2">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="seccio">
+            <h2>Cerca de Potència</h2>
+
+            <label for="potencia">Buscar cotxes amb més de:</label>
+            <div class="controls cerca">
+                <input type="number" id="potencia" placeholder="Ex: 1500">
+                <button id="cercar">Cercar</button>
+            </div>
+
+            <p id="errorCerca" class="error"></p>
+            <div id="resultats" class="resultats">
+                <p>Introdueix una potència per començar la cerca.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
